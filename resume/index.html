@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Resume: Vadim Graboys</title>
+    <link href='http://fonts.googleapis.com/css?family=Codystar|Julius+Sans+One|Open+Sans' rel='stylesheet' type='text/css'>
+
+    <style>
+
+@font-face {
+    font-family: 'League Gothic';
+    src: local('League Gothic'), url('leaguegothic-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: 'Open Sans';
+}
+header {
+  border-bottom: 0px solid #ddd;
+  position: relative;
+  padding: 0px 10px;
+  margin-left: 250px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #999;
+  width: 600px;
+}
+header h1 {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  font-size: 73px;
+  font-family: 'Codystar';
+  font-weight: normal;
+  color: rgba(0,0,0,0);
+  text-shadow: 2px 0px #000, -2px 0px #000;
+}
+header .contact {
+  display: block;
+  list-style-type: none;
+  left: 10px;
+  top: 20px;
+  padding-left: 0px;
+  margin-top: 0px;
+}
+header .contact li {
+  float: left;
+  font-size: 14px;
+}
+header .contact li + li {
+  padding-left: 102px;
+}
+
+section {
+  padding: 10px;
+}
+
+section h1 {
+  float: left;
+  width: 200px;
+  text-align: right;
+  font-family: 'Julius Sans One';
+  position: absolute;
+  margin-left: -250px;
+  bottom: 0px;
+  margin-bottom: 0px;
+}
+
+section {
+  width: 600px;
+  margin-left: 250px;
+}
+
+section li + li {
+  margin-top: 5px;
+}
+
+.header {
+  position: relative;
+  margin-top: 10px;
+}
+
+.header.more-space {
+  margin-top: 20px;
+}
+
+.header h2 {
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.header .date {
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-family: 'Julius Sans One';
+  color: #666;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+    <h1>Vadim Graboys</h1>
+    <ul class="contact">
+      <li>dimva13@gmail.com</li>
+      <li><a href="http://deapthoughts.com">deapthoughts.com</a></li>
+      <li><a href="http://github.com/vadimg">github.com/vadimg</a></li>
+    </ul>
+    </header>
+    <section>
+    <div class="header">
+      <h1>Summary</h1>
+      All around generalist, able to
+    </div>
+    <div class="content">
+      <ul>
+        <li>create interactive web applications</li>
+        <li>architect distributed systems processing hundreds of thousands of requests/sec</li>
+        <li>make low-level C performance optimizations</li>
+        <li>do devops and system administration</li>
+      </ul>
+      and everything in between. Good knowledge of math, statistics, and machine learning concepts, although not an expert. Currently learning and experimenting with visual design.
+    </div>
+    </section>
+    <section>
+    <div class="header">
+      <h1>Work</h1>
+        <h2>Chartbeat</h2>
+        <div class="date">Feb 2012 - Current</div>
+      </div>
+      <ul class="accomplishments">
+        <li>Working on new dashboard using AngularJS. Creating reusable widgets and views which use them.</li>
+        <li>Proposed and created the ability to do ad-hoc queries against our proprietary datastore by embedding LuaJIT into a C/C++ executable and exposing C datastructures to Lua.</li>
+        <li>Proposed and created a sandboxed development environment so developers unfamiliar with our backend infrastructure could safely and rapidily develop/test new APIs and deploy them to production.</li>
+        <li>Architected and built a backend to gather and process over 20,000 events/second and insert aggregates idempotently into MongoDB, in 3 weeks from conception to production release. Several months later, there have been no major issues.</li>
+        <li>Performed ops for a few months. Found early-warning metrics which allowed us to handle a 2x load spike without major issues.</li>
+      </ul>
+      <div class="header">
+        <h2>Bitfloor</h2>
+        <div class="date">July 2011 - Feb 2012</div>
+      </div>
+      <ul class="accomplishments">
+        <li>Co-founder of bitcoin exchange.</li>
+        <li>Created core matching engine, as well as several other backend and frontend components, all in node.js/Javascript.</li>
+      </ul>
+      <div class="header">
+        <h2>Bloomberg</h2>
+        <div class="date">July 2009 - July 2011</div>
+      </div>
+      <ul class="accomplishments">
+        <li>Technical lead on new mortgage security structuring tool written in .NET and Python with C/C++ extensions.</li>
+        <li>Replaced legacy monolithic system with a distributed SOA system written in Python.</li>
+        <li>Created a domain specific language and simulator for mortgage backed securities in Python.</li>
+      </ul>
+    </section>
+    <section>
+    <div class="header">
+      <h1>Education</h1>
+      Rutgers University, School of Engineering
+    </div>
+    <div class="content">
+      <ul>
+        <li>B.S. in Electrical and Computer Engineering</li>
+        <li>B.S. in Computer Science</li>
+        <li>GPA: 3.98/4.00</li>
+      </ul>
+    </div>
+    </section>
+    <section>
+    <div class="header">
+      <h1>Personal</h1>
+      <h2>Real-time Chess</h2>
+    </div>
+    <div class="content">
+      Like turn-based chess, except real-time. <a href="//rtchess.deapthoughts.com">Play a game!</a>
+    </div>
+    <div class="header more-space">
+      <h2>Bintrees</h2>
+    </div>
+    <div class="content">
+      Red-black and Binary trees in javascript. <a href="https://github.com/vadimg/js_bintrees">See the code.</a>
+    </div>
+    </section>
+  </body>
+</html>
