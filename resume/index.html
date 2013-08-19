@@ -6,21 +6,19 @@
 
     <style>
 
-@font-face {
-    font-family: 'League Gothic';
-    src: local('League Gothic'), url('leaguegothic-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
   font-family: 'Open Sans';
 }
+
+#center-container {
+  width: 600px;
+  margin: 0 auto;
+}
+
 header {
   border-bottom: 0px solid #ddd;
   position: relative;
-  padding: 0px 10px;
-  margin-left: 250px;
+  margin: 0 auto;
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #999;
@@ -34,7 +32,10 @@ header h1 {
   font-family: 'Codystar';
   font-weight: normal;
   color: rgba(0,0,0,0);
-  text-shadow: 2px 0px #000, -2px 0px #000;
+  text-shadow: 2px 0px #aa0000, -2px 0px #0000aa;
+}
+header h1:hover {
+  text-shadow: 2px 0px rgba(255,0,0,.5), -2px 0px rgba(0,0,255,.5);
 }
 header .contact {
   display: block;
@@ -57,19 +58,19 @@ section {
 }
 
 section h1 {
-  float: left;
   width: 200px;
   text-align: right;
   font-family: 'Julius Sans One';
   position: absolute;
-  margin-left: -250px;
+  left: -250px;
   bottom: 0px;
   margin-bottom: 0px;
 }
 
 section {
   width: 600px;
-  margin-left: 250px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 section li + li {
@@ -94,7 +95,7 @@ section li + li {
 .header .date {
   display: inline-block;
   position: absolute;
-  bottom: 0px;
+  bottom: 1px;
   right: 0px;
   font-family: 'Julius Sans One';
   color: #666;
@@ -102,6 +103,7 @@ section li + li {
     </style>
   </head>
   <body>
+    <div id="center-container">
     <header>
     <h1>Vadim Graboys</h1>
     <ul class="contact">
@@ -184,5 +186,6 @@ section li + li {
       Red-black and Binary trees in Javascript. <a href="https://github.com/vadimg/js_bintrees">See the code.</a>
     </div>
     </section>
+    </div>
   </body>
 </html>
