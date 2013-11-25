@@ -5,6 +5,12 @@
     <link href='http://fonts.googleapis.com/css?family=Codystar|Julius+Sans+One|Open+Sans' rel='stylesheet' type='text/css'>
 
     <style type="text/less">
+.transition (@transition) {
+	-webkit-transition: @transition;
+	-moz-transition:    @transition;
+	-ms-transition:     @transition;
+	-o-transition:      @transition;
+}
 
 a {
   color: #0077cc;
@@ -119,6 +125,12 @@ section, header {
     font-family: 'Julius Sans One';
     margin: 0px;
     padding-right: 50px;
+
+    @media (max-width: 800px) {
+      opacity: 0;
+    }
+
+    .transition(opacity 1s);
   }
 
   h2 {
