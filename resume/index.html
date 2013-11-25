@@ -4,28 +4,49 @@
     <title>Resume: Vadim Graboys</title>
     <link href='http://fonts.googleapis.com/css?family=Codystar|Julius+Sans+One|Open+Sans' rel='stylesheet' type='text/css'>
 
-    <style>
+    <style type="text/less">
 
 a {
   color: #0077cc;
-}
-a:link {
-  text-decoration:none;
-}
-a:visited {
-  text-decoration:none;
-  color: #4a6b82;
-}
-a:hover {
-  text-decoration:underline;
-}
-a:active {
-  text-decoration:underline;
+
+  &:link {
+    text-decoration:none;
+  }
+
+  &:hover, &:active {
+    text-decoration:underline;
+  }
+
+  &:visited {
+    color: #4a6b82;
+  }
 }
 
 body {
   font-family: 'Open Sans';
 }
+
+ul.distribute {
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+
+  li {
+      vertical-align: top;
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+  }
+
+  &:after {
+      content: '';
+      width: 100%;
+      display: inline-block;
+      font-size: 0;
+      line-height: 0
+  }
+}
+
 
 header {
   border-bottom: 0px solid #ddd;
@@ -35,94 +56,93 @@ header {
   padding-bottom: 10px;
   border-bottom: 1px solid #999;
   width: 600px;
-}
-header h1 {
-  display: block;
-  padding: 0px;
-  margin: 0px;
-  font-size: 73px;
-  font-family: 'Codystar';
-  font-weight: normal;
-  color: rgba(0,0,0,0);
-  text-shadow: 2px 0px #aa0000, -2px 0px #0000aa;
-}
-header h1:hover {
-  text-shadow: 2px 0px rgba(255,0,0,.5), -2px 0px rgba(0,0,255,.5);
-}
-header .contact {
-  display: block;
-  list-style-type: none;
-  left: 10px;
-  top: 20px;
-  padding-left: 0px;
-  margin-top: 0px;
-}
-header .contact li {
-  float: left;
-  font-size: 14px;
-}
-header .contact li + li {
-  padding-left: 102px;
+
+  h1 {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    font-size: 73px;
+    font-family: 'Codystar';
+    font-weight: normal;
+    color: rgba(0,0,0,0);
+    text-shadow: 2px 0px #aa0000, -2px 0px #0000aa;
+
+    &:hover {
+      text-shadow: 2px 0px rgba(255,0,0,.5), -2px 0px rgba(0,0,255,.5);
+    }
+  }
+
+  .contact {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 20px;
+  }
 }
 
 section {
   width: 600px;
-  padding: 10px 0px;
-  margin: 0 auto;
-}
+  margin: 30px auto;
 
-section h1 {
-  width: 200px;
-  text-align: right;
-  font-family: 'Julius Sans One';
-  position: absolute;
-  left: -250px;
-  bottom: 0px;
-  margin-bottom: 0px;
-}
-
-section li + li {
-  margin-top: 5px;
+  li + li {
+    margin-top: 5px;
+  }
 }
 
 .header {
-  position: relative;
-  margin-top: 10px;
-}
-
-.header.more-space {
+  display: table;
   margin-top: 20px;
-}
+  width: 100%;
 
-.header h2 {
-  display: inline-block;
-  margin-bottom: -2px;
-  margin-top: 0px;
-}
+  &.with-type {
+    position: relative;
+    width: 850px;
+    left: -250px;
+  }
 
-.header .date {
-  display: inline-block;
-  position: absolute;
-  bottom: 1px; /* this sucks but needs to be here to align to baseline */
-  right: 0px;
-  font-family: 'Julius Sans One';
-  color: #666;
+  h1 {
+    font-weight: normal;
+    width: 200px;
+    display: table-cell;
+    text-align: right;
+    font-family: 'Julius Sans One';
+    margin: 0px;
+    padding-right: 50px;
+  }
+
+  h2 {
+    display: table-cell;
+    margin: 0px;
+  }
+
+  .date {
+    display: table-cell;
+    font-family: 'Julius Sans One';
+    color: #666;
+    text-align: right;
+  }
+
 }
     </style>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js" type="text/javascript"></script>
   </head>
   <body>
     <header>
     <h1>Vadim Graboys</h1>
-    <ul class="contact">
+    <ul class="contact distribute">
       <li>dimva13@gmail.com</li>
       <li><a href="http://deapthoughts.com">deapthoughts.com</a></li>
       <li><a href="http://github.com/vadimg">github.com/vadimg</a></li>
     </ul>
     </header>
     <section>
-    <div class="header">
+    <div class="header with-type">
       <h1>Summary</h1>
-      All around generalist, able to
+      <span>
+        All around generalist, able to
+      </span>
     </div>
     <div class="content">
       <ul>
@@ -135,13 +155,13 @@ section li + li {
     </div>
     </section>
     <section>
-    <div class="header">
+    <div class="header with-type">
       <h1>Work</h1>
-        <h2>Chartbeat</h2>
-        <div class="date">Feb 2012 - Current</div>
-      </div>
+      <h2>Chartbeat</h2>
+      <div class="date">Feb 2012 - Current</div>
+    </div>
       <ul class="accomplishments">
-        <li>Working on new dashboard using AngularJS. Creating reusable widgets and views which use them.</li>
+        <li>Working on new dashboard using AngularJS.</li>
         <li>Proposed and created the ability to do ad-hoc queries against our proprietary datastore by embedding LuaJIT into a C/C++ executable and exposing C datastructures to Lua.</li>
         <li>Proposed and created a sandboxed development environment so developers unfamiliar with our backend infrastructure could safely and rapidily develop/test new APIs and deploy them to production.</li>
         <li>Architected and built a backend to gather and process over 20,000 events/second and insert aggregates idempotently into MongoDB, in 3 weeks from conception to production release. Several months later, there have been no major issues.</li>
@@ -166,7 +186,7 @@ section li + li {
       </ul>
     </section>
     <section>
-    <div class="header">
+    <div class="header with-type">
       <h1>Education</h1>
       <h2>Rutgers University, School of Engineering</h2>
     </div>
@@ -179,14 +199,14 @@ section li + li {
     </div>
     </section>
     <section>
-    <div class="header">
+    <div class="header with-type">
       <h1>Personal</h1>
       <h2>Real-time Chess</h2>
     </div>
     <div class="content">
       Like turn-based chess, except real-time. <a href="//rtchess.deapthoughts.com">Play a game!</a>
     </div>
-    <div class="header more-space">
+    <div class="header">
       <h2>Bintrees</h2>
     </div>
     <div class="content">
