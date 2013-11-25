@@ -47,7 +47,6 @@ ul.distribute {
   }
 }
 
-
 header {
   border-bottom: 0px solid #ddd;
   position: relative;
@@ -55,7 +54,6 @@ header {
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #999;
-  width: 600px;
 
   h1 {
     display: block;
@@ -82,11 +80,23 @@ header {
 }
 
 section {
-  width: 600px;
   margin: 30px auto;
 
   li + li {
     margin-top: 5px;
+  }
+}
+
+section, header {
+  width: 600px;
+
+  @media (max-width: 1100px) {
+    margin-left: 242px;
+  }
+
+  @media (max-width: 850px) {
+    margin-left: auto;
+    margin-right: 0px;
   }
 }
 
