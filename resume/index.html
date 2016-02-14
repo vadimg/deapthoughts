@@ -1,187 +1,195 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     <title>Resume: Vadim Graboys</title>
-    <link href='http://fonts.googleapis.com/css?family=Codystar|Julius+Sans+One|Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=800">
-
-    <style type="text/less">
-.transition (@transition) {
-	-webkit-transition: @transition;
-	-moz-transition:    @transition;
-	-ms-transition:     @transition;
-	-o-transition:      @transition;
-}
-
-body {
-  font-family: 'Open Sans';
-}
-
-a {
-  color: #0077cc;
-
-  &:link {
-    text-decoration:none;
-  }
-
-  &:hover, &:active {
-    text-decoration:underline;
-  }
-
-  &:visited {
-    color: #4a6b82;
-  }
-}
-
-ul.distribute {
-  text-align: justify;
-  -ms-text-justify: distribute-all-lines;
-  text-justify: distribute-all-lines;
-
-  li {
-      vertical-align: top;
-      display: inline-block;
-      *display: inline;
-      zoom: 1;
-  }
-
-  &:after {
-      content: '';
-      width: 100%;
-      display: inline-block;
-      font-size: 0;
-      line-height: 0
-  }
-}
-
-header {
-  border-bottom: 0px solid #ddd;
-  position: relative;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #999;
-
-  h1 {
-    display: block;
-    padding: 0px;
-    margin: 0px;
-    font-size: 73px;
-    font-family: 'Codystar';
-    font-weight: normal;
-    color: rgba(0,0,0,0);
-    text-shadow: 2px 0px #aa0000, -2px 0px #0000aa;
-
-    &:hover {
-      text-shadow: 2px 0px rgba(255,0,0,.5), -2px 0px rgba(0,0,255,.5);
-    }
-  }
-
-  .contact {
-    list-style-type: none;
-    padding-left: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    height: 20px;
-  }
-}
-
-section {
-  margin: 30px auto;
-
-  li + li {
-    margin-top: 5px;
-  }
-}
-
-section, header {
-  width: 600px;
-
-  @media (max-width: 1100px) {
-    margin-left: 242px;
-  }
-
-  @media (max-width: 850px) {
-    margin-left: auto;
-    margin-right: 0px;
-  }
-}
-
-.subheader {
-  display: table;
-  margin-top: 20px;
-  width: 100%;
-
-  &.with-type {
-    position: relative;
-    width: 850px;
-    left: -250px;
-  }
-
-  h1 {
-    font-weight: normal;
-    width: 200px;
-    display: table-cell;
-    text-align: right;
-    font-family: 'Julius Sans One';
-    margin: 0px;
-    padding-right: 50px;
-
-    @media (max-width: 799px) {
-      opacity: 0;
-    }
-
-    .transition(opacity 1s);
-  }
-
-  h2 {
-    display: table-cell;
-    margin: 0px;
-  }
-
-  .date {
-    display: table-cell;
-    font-family: 'Julius Sans One';
-    color: #666;
-    text-align: right;
-  }
-
-}
+    <style type="text/css">
+      body {
+        font-family: 'Open Sans';
+        font-size: 12px;
+      }
+      a {
+        color: #0077cc;
+      }
+      a:link {
+        text-decoration: none;
+      }
+      a:hover,
+      a:active {
+        text-decoration: underline;
+      }
+      a:visited {
+        color: #4a6b82;
+      }
+      ul.distribute {
+        text-align: justify;
+        -ms-text-justify: distribute-all-lines;
+        text-justify: distribute-all-lines;
+      }
+      ul.distribute li {
+        vertical-align: top;
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+      }
+      ul.distribute:after {
+        content: '';
+        width: 100%;
+        display: inline-block;
+        font-size: 0;
+        line-height: 0;
+      }
+      header {
+        position: relative;
+        margin: 0 auto;
+      }
+      header .content {
+        border-bottom: 1px dotted rgb(223, 114, 62);
+        height: 53px;
+        margin-bottom: 20px;
+      }
+      header h1 {
+        display: block;
+        float: left;
+        padding: 0px;
+        padding-bottom: 2px;
+        margin: 0px;
+        font-size: 47px;
+        font-family: 'Julius Sans One';
+        font-weight: normal;
+        color: rgb(223, 114, 62);
+      }
+      header .contact {
+        list-style-type: none;
+        padding-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 20px;
+        float: right;
+      }
+      section {
+        margin: 30px auto;
+      }
+      section h1 {
+        font-family: 'Julius Sans One';
+        font-size: 20px;
+        color: rgb(223, 114, 62);
+        border-bottom: 1px dotted rgb(223, 114, 62);
+      }
+      section h2 {
+        font-family: 'Julius Sans One';
+        font-size: 16px;
+      }
+      section li + li {
+        margin-top: 5px;
+      }
+      section,
+      header {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media (max-width: 599px) {
+        section,
+        header {
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+      }
+      .subheader {
+        display: table;
+        margin-top: 20px;
+        width: 100%;
+      }
+      .subheader.with-type {
+        position: relative;
+        width: 850px;
+        left: -250px;
+      }
+      .subheader h1 {
+        font-weight: normal;
+        width: 200px;
+        display: table-cell;
+        text-align: right;
+        font-family: 'Julius Sans One';
+        margin: 0px;
+        padding-right: 50px;
+      }
+      .subheader h2 {
+        display: table-cell;
+        margin: 0px;
+      }
+      .subheader .date {
+        display: table-cell;
+        font-family: 'Julius Sans One';
+        font-size: 12px;
+        color: #666;
+        text-align: right;
+      }
+      .languages, .url {
+        font-size: 11px;
+        font-style: italic;
+      }
+      .url {
+        margin-bottom: 12px;
+      }
     </style>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.4.2/less.min.js" type="text/javascript"></script>
   </head>
   <body>
-    <header>
-    <h1>Vadim Graboys</h1>
-    <ul class="contact distribute">
-      <li>dimva13@gmail.com</li>
-      <li><a href="http://deapthoughts.com">deapthoughts.com</a></li>
-      <li><a href="http://github.com/vadimg">github.com/vadimg</a></li>
-    </ul>
-    </header>
-    <section>
-    <div class="subheader with-type">
-      <h1>Summary</h1>
-      <span>
-        All around generalist, able to
-      </span>
-    </div>
+  <header>
     <div class="content">
+      <h1>Vadim Graboys</h1>
+      <ul class="contact">
+        <li><a target="_blank" href="mailto:dimva13@gmail.com">dimva13@gmail.com</a></li>
+        <li><a target="_blank" href="http://deapthoughts.com/">deapthoughts.com</a></li>
+        <li><a target="_blank" href="http://github.com/vadimg">github.com/vadimg</a></li>
+      </ul>
+    </div>
+  </header>
+    <section style="
+    margin-top: 0;
+    padding-top: 0;
+">
+
+    <div class="content">
+      All around generalist, able to:
       <ul>
         <li>create interactive web applications</li>
         <li>architect distributed systems processing hundreds of thousands of requests/sec</li>
         <li>make low-level C performance optimizations</li>
         <li>do devops and system administration</li>
       </ul>
-      and everything in between. Good knowledge of math, statistics, and machine learning concepts, although not an expert. Currently learning and experimenting with visual design.
+      and everything in between. Intermediate knowledge of math, statistics, and machine learning concepts.
     </div>
     </section>
     <section>
-    <div class="subheader with-type">
       <h1>Work</h1>
+    <div class="subheader">
+      <h2>Spring</h2>
+      <div class="date">Jan 2014 - Current</div>
+    </div>
+    <div class="languages">
+      Team lead, programming in Go, Python, Javascript (AngularJS), Objective-C (iOS)
+    </div>
+    <ul class="accomplishments">
+      <li>Leading team to get product data into our system, through a variety of sources including API integrations, structured data feeds, and scraping webpages.</li>
+      <li>Lead creation of scraping infrastructure with monitoring and alerting so junior developers can quickly and safely create scrapers to extract product data from websites.</li>
+      <li>Created framework to aid junior developers in building ETL applications.</li>
+      <li>Proposed and led project to create new onboarding experience, which asks users to select their tastes to determine the products they will see.</li>
+      <li>Optimized SQL queries and created caching infrastructure to handle 10-20x more load.</li>
+      <li>Created widgets in the iOS application whose appearance and functionality is configurable from the server.</li>
+      <li>Created the service which manages all orders, payments, and interfacing with 3rd party systems.</li>
+    </ul>
+    <div class="subheader">
       <h2>Chartbeat</h2>
-      <div class="date">Feb 2012 - Current</div>
+      <div class="date">Feb 2012 - Jan 2014</div>
+    </div>
+    <div class="languages">
+      C, C++, Python, Javascript (AngularJS)
     </div>
     <ul class="accomplishments">
       <li>Created the new dashboard for our publishing product using AngularJS.</li>
@@ -190,9 +198,15 @@ section, header {
       <li>Architected and built a backend to gather and process over 20,000 events/second and insert aggregates idempotently into MongoDB, in 3 weeks from conception to production release. A year later, there have been no major issues.</li>
       <li>Performed ops for a few months. Found early-warning metrics which allowed us to handle 2-30x load spikes without major issues.</li>
     </ul>
+
+    <div style="page-break-after:always;"></div>
+
     <div class="subheader">
       <h2>Bitfloor</h2>
       <div class="date">July 2011 - Feb 2012</div>
+    </div>
+    <div class="languages">
+      Javascript (node.js)
     </div>
     <ul class="accomplishments">
       <li>Co-founder of bitcoin exchange.</li>
@@ -202,16 +216,20 @@ section, header {
       <h2>Bloomberg</h2>
       <div class="date">July 2009 - July 2011</div>
     </div>
+    <div class="languages">
+      C, C++, Python, Javascript, C#
+    </div>
     <ul class="accomplishments">
+      <li>Replaced Bloomberg's legacy mortgage-backed security analysis system with a service-oriented architecture written in Python.</li>
+      <li>Created a domain specific language and simulator for mortgage backed securities in Python. All mortgage-backed securities at Bloomberg are now modeled and analyzed with this system.</li>
       <li>Technical lead on new mortgage security structuring tool written in .NET and Python with C/C++ extensions.</li>
-      <li>Replaced legacy monolithic system with a distributed service-oriented architecture written in Python.</li>
-      <li>Created a domain specific language and simulator for mortgage backed securities in Python.</li>
     </ul>
     </section>
     <section>
-    <div class="subheader with-type">
       <h1>Education</h1>
-      <h2>Rutgers University, School of Engineering</h2>
+    <div class="subheader">
+      <h2>Rutgers University, New Brunswick</h2>
+      <div class="date">2005 - 2009</div>
     </div>
     <div class="content">
       <ul>
@@ -222,18 +240,33 @@ section, header {
     </div>
     </section>
     <section>
-    <div class="subheader with-type">
-      <h1>Personal</h1>
+      <h1>Code</h1>
+    <div class="subheader">
       <h2>Real-time Chess</h2>
     </div>
+    <div class="url">
+      <a target="_blank" href="http://rtchess.deapthoughts.com">rtchess.deapthoughts.com</a>
+    </div>
     <div class="content">
-      Like turn-based chess, except real-time. <a href="//rtchess.deapthoughts.com">Play a game!</a>
+      Like turn-based chess, except real-time.
+    </div>
+    <div class="subheader">
+      <h2>Decimal</h2>
+    </div>
+    <div class="url">
+      <a target="_blank" href="https://github.com/shopspring/decimal">github.com/shopspring/decimal</a>
+    </div>
+    <div class="content">
+      The most popular arbitrary-precision decimal library for Go.
     </div>
     <div class="subheader">
       <h2>Bintrees</h2>
     </div>
+    <div class="url">
+      <a target="_blank" href="https://github.com/vadimg/js_bintrees">github.com/vadimg/js_bintrees</a>
+    </div>
     <div class="content">
-      Red-black and Binary trees in Javascript. <a href="https://github.com/vadimg/js_bintrees">See the code.</a>
+      Red-black and Binary trees in Javascript.
     </div>
     </section>
   </body>
